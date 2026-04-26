@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Peralta Design Services</title>
+  <link rel="stylesheet" href="styles/index.css"/>
+  <link rel="icon" type="image/png" href="images/logoPDS.png"/>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="nav-inner">
+      <a class="logo" href="#">
+        <img src="images/logoPDS.png" alt="Peralta Design Services logo"/>
+      </a>
+
+      <div class="nav-right">
+        <ul class="nav-links">
+          <li><a href="#about">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="careers.html">Careers</a></li>
+        </ul>
+        <a href="contactUs.html" class="nav-cta">Contact Us</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-image-wrapper">
+      <img class="hero-img" src="images/maldives.jpg" alt="Peralta Design Services hero"/>
+      <div class="hero-content">
+        <div class="hero-stat">100+</div>
+        <div class="hero-tagline">Projects Delivered.<br/>Excellence in Every Detail.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="about-inner">
+      <div class="about-left">
+        <div class="about-label">About Us</div>
+        <h2 class="about-heading">Welcome to PDS</h2>
+        <div class="about-body">
+          <p>Founded in 2020, The Firm is a trusted outsourced Architecture, Interior Design, Engineering, and BIM services partner, supporting consultants, developers, and contractors worldwide. With a combined experience of over 20 years, our team delivers reliable, high-quality design and documentation services aligned with international standards. We work as an extension of our clients' in-house teams, providing scalable and cost-effective support across residential, commercial, institutional, and interior projects. Our outsourcing model helps clients increase capacity, reduce turnaround time, and maintain design and technical excellence throughout every project stage.</p>
+          <p>Powered by a BIM-driven workflow, our multidisciplinary team of architects, designers, engineers, and BIM specialists collaborates seamlessly to deliver coordinated, buildable, and efficient solutions on time and with clarity. Our structured workflows, clear communication, and rigorous quality control ensure consistent delivery across projects of all scales. By aligning closely with our clients' standards and processes, we build long-term partnerships that support efficiency, reliability, and sustainable growth.</p>
+        </div>
+      </div>
+      <div class="about-right">
+        <img src="images/office1.png" alt="PDS Office"/>
+      </div>
+    </div>
+  </section>
+
+  <!-- COLLABORATE BANNER -->
+  <section class="collaborate">
+  <div class="collaborate-wrapper">
+    <img src="images/collaborate.png" alt="Collaborate with your team"/>
+    <div class="collaborate-text">
+      <h2>How can we best collaborate<br/>with your team?</h2>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="faq-inner">
+    <h2 class="faq-heading">Frequently Asked Questions</h2>
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          What is BIM?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>BIM (Building Information Modeling) is a digital process that involves creating and managing detailed 3D models of buildings. It integrates architectural, structural, and MEP data to support planning, design, construction, and operation throughout a project’s lifecycle.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          What are the benefits of using BIM?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>BIM improves design accuracy, reduces errors, saves time and cost, enhances coordination among teams, and allows better visualization before construction begins. It also supports efficient project planning and long-term asset management.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          How does BIM improve collaboration in construction projects?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>BIM enables all project stakeholders—architects, engineers, contractors, and clients—to work on a shared digital model. This real-time collaboration reduces misunderstandings, improves communication, and ensures everyone works with updated information.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          What is clash detection in BIM?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Clash detection is the process of identifying conflicts between different building systems (such as structural, electrical, and plumbing elements) within a BIM model before construction. This helps prevent costly rework and delays on site.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Can BIM be used for facility management?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Yes, BIM can be used for facility management by providing accurate building data for maintenance, space management, renovations, and asset tracking. It helps owners manage buildings more efficiently throughout their operational life.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-social">
+      <a href="https://www.facebook.com/profile.php?id=61551814892912" target="_blank" aria-label="Facebook">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white">
+          <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+        </svg>
+      </a>
+      <a href="https://www.linkedin.com/company/peraltadesignservices/posts/?feedView=all" target="_blank" aria-label="LinkedIn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white">
+          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/>
+          <circle cx="4" cy="4" r="2"/>
+        </svg>
+      </a>
+    </div>
+    <p class="footer-copy">©2025 by PDS. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  function toggleFaq(btn) {
+    const item = btn.parentElement;
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
+</script>
+
+
+
+
+</body>
+</html>
