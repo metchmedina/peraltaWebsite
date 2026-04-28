@@ -47,7 +47,7 @@
         <div class="form-card">
           <h2 class="form-title">Fill out this form</h2>
 
-          <form id="careersForm" enctype="multipart/form-data">
+          <form id="careersForm" action="submit.php" method="POST" enctype="multipart/form-data">
 
             <div class="form-row">
               <div class="form-group">
@@ -313,12 +313,12 @@
     form.addEventListener('submit', async function(e) {
       e.preventDefault();
       const data = new FormData(form);
-      const response = await fetch('https://formspree.io/f/xgorbyjn', {
+      const response = await fetch('submit.php', {
         method: 'POST',
-        body: data,
-        headers: { 'Accept': 'application/json' }
+        body: data
       });
-      if (response.ok) {
+      const result = await response.text();
+      if (result.trim() === 'success') {
         form.innerHTML = '<p style="text-align:center; font-size:18px; padding:40px 0;">✅ Thank you! Your application has been submitted.</p>';
       } else {
         alert('Something went wrong. Please try again.');

@@ -1,7 +1,7 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-  $to = "ethanee.lacre@gmail.com"; // your email here
+  $to = "medinametchjhon@gmail.com";
   $subject = "New Career Application — " . $_POST["position"];
 
   $body = "
@@ -19,7 +19,6 @@ LinkedIn: " . $_POST["linkedin"] . "
   $headers = "From: noreply@peraltadesignservices.com\r\n";
   $headers .= "Reply-To: " . $_POST["email"] . "\r\n";
 
-  // Handle file attachment
   if (isset($_FILES["resume"]) && $_FILES["resume"]["error"] == 0) {
     $filename = $_FILES["resume"]["name"];
     $filetype = $_FILES["resume"]["type"];
@@ -48,4 +47,3 @@ LinkedIn: " . $_POST["linkedin"] . "
     echo "error";
   }
 }
-?>
