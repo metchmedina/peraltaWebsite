@@ -108,7 +108,7 @@
         form.addEventListener('submit', async function(e) {
             e.preventDefault();
             const data = new FormData(form);
-            const response = await fetch('contactUs.php', {
+            const response = await fetch('contact.php', {
                 method: 'POST',
                 body: data
             });
