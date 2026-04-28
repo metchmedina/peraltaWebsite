@@ -1,22 +1,20 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-  $to = "medinametchjhon@gmail.com";
-  $subject = "New Career Application — " . $_POST["position"];
+  $to      = "metch.m@peraltadesignservices.com";
+  $subject = "New Career Application — " . htmlspecialchars($_POST["position"]);
 
-  $body = "
-New application received:\n
-First Name: " . $_POST["first_name"] . "
-Last Name: " . $_POST["last_name"] . "
-Country/Region: " . $_POST["country"] . "
-Position: " . $_POST["position"] . "
-English Level: " . $_POST["english_level"] . "
-Email: " . $_POST["email"] . "
-Phone: " . $_POST["phone"] . "
-LinkedIn: " . $_POST["linkedin"] . "
-  ";
+  $body  = "New application received:\n\n";
+  $body .= "First Name: "    . htmlspecialchars($_POST["first_name"])    . "\n";
+  $body .= "Last Name: "     . htmlspecialchars($_POST["last_name"])     . "\n";
+  $body .= "Country/Region: ". htmlspecialchars($_POST["country"])       . "\n";
+  $body .= "Position: "      . htmlspecialchars($_POST["position"])      . "\n";
+  $body .= "English Level: " . htmlspecialchars($_POST["english_level"]) . "\n";
+  $body .= "Email: "         . htmlspecialchars($_POST["email"])         . "\n";
+  $body .= "Phone: "         . htmlspecialchars($_POST["phone"])         . "\n";
+  $body .= "LinkedIn: "      . htmlspecialchars($_POST["linkedin"])      . "\n";
 
-  $headers = "From: noreply@peraltadesignservices.com\r\n";
+  $headers  = "From: noreply@peraltadesignservices.com\r\n";
   $headers .= "Reply-To: " . $_POST["email"] . "\r\n";
 
   if (isset($_FILES["resume"]) && $_FILES["resume"]["error"] == 0) {
@@ -47,3 +45,4 @@ LinkedIn: " . $_POST["linkedin"] . "
     echo "error";
   }
 }
+?>

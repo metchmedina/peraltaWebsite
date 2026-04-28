@@ -1,20 +1,17 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    $to = "medinametchjhon@gmail.com";
-    $subject = "New Contact Inquiry from " . $_POST["first_name"] . " " . $_POST["last_name"];
+    $to      = "metch.m@peraltadesignservices.com";
+    $subject = "New Contact Inquiry from " . htmlspecialchars($_POST["first_name"]) . " " . htmlspecialchars($_POST["last_name"]);
 
-    $body = "
-New contact inquiry received:
+    $body  = "New contact inquiry received:\n\n";
+    $body .= "First Name: " . htmlspecialchars($_POST["first_name"])  . "\n";
+    $body .= "Last Name: "  . htmlspecialchars($_POST["last_name"])   . "\n";
+    $body .= "Email: "      . htmlspecialchars($_POST["email"])       . "\n";
+    $body .= "Phone: "      . htmlspecialchars($_POST["phone"])       . "\n";
+    $body .= "Message:\n"   . htmlspecialchars($_POST["description"]) . "\n";
 
-First Name: " . $_POST["first_name"] . "
-Last Name: " . $_POST["last_name"] . "
-Email: " . $_POST["email"] . "
-Phone: " . $_POST["phone"] . "
-Message: " . $_POST["description"] . "
-  ";
-
-    $headers = "From: noreply@peraltadesignservices.com\r\n";
+    $headers  = "From: noreply@peraltadesignservices.com\r\n";
     $headers .= "Reply-To: " . $_POST["email"] . "\r\n";
     $headers .= "MIME-Version: 1.0\r\n";
     $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
@@ -25,3 +22,4 @@ Message: " . $_POST["description"] . "
         echo "error";
     }
 }
+?>
