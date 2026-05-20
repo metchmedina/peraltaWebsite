@@ -15,9 +15,7 @@ html, body {
 /* ── NAVBAR ── */
 nav {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  top: 0; left: 0; right: 0;
   z-index: 100;
   display: flex;
   align-items: center;
@@ -41,16 +39,9 @@ nav {
   margin-left: auto;
 }
 
-.logo img {
-  height: 54px;
-  width: 120px;
-}
+.logo img { height: 54px; width: 120px; }
 
-.nav-links {
-  display: flex;
-  gap: 36px;
-  list-style: none;
-}
+.nav-links { display: flex; gap: 36px; list-style: none; }
 
 .nav-links a {
   font-size: 20px;
@@ -59,9 +50,7 @@ nav {
   transition: opacity 0.2s;
 }
 
-.nav-links a:hover {
-  opacity: 0.45;
-}
+.nav-links a:hover { opacity: 0.45; }
 
 .nav-cta {
   background: #000;
@@ -71,9 +60,7 @@ nav {
   text-decoration: none;
 }
 
-.nav-cta:hover {
-  opacity: 0.75;
-}
+.nav-cta:hover { opacity: 0.75; }
 
 /* ── TEAM SECTION ── */
 .team {
@@ -84,9 +71,7 @@ nav {
   background: #f5f5f5;
 }
 
-.team-inner {
-  width: 1100px;
-}
+.team-inner { width: 1100px; }
 
 .team-title {
   font-size: 40px;
@@ -94,101 +79,93 @@ nav {
   margin-bottom: 40px;
 }
 
-/* CEO container */
+/* ── CEO ── */
 .team-ceo {
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
 }
 
-/* Section subtitles */
-.section-subtitle {
-  text-align: center;
-  font-size: 24px;
-  font-weight: 600;
-  margin-bottom: 32px;
-  color: #222;
-  letter-spacing: -0.3px;
-  border-top: 1px solid #ddd;
-  padding-top: 24px;
+.team-ceo .team-card {
+  flex: 0 0 280px;
+  max-width: 280px;
+  padding: 20px;
 }
 
-/* FIRST 5 LEADERS SECTION - adds EXTRA SPACE after the leaders */
-.team-leaders-section {
-  margin-bottom: 200px;
+.team-ceo .team-card img { height: 300px; }
+
+.team-ceo .team-card h3 { font-size: 16px; }
+
+.team-ceo .team-card p { font-size: 14px; }
+
+/* ── LEADERS SECTION ── */
+.team-leaders-section { margin-bottom: 180px; }
+
+.team-leaders-section .team-card {
+  flex: 0 0 280px;
+  max-width: 280px;
+  padding: 20px;
 }
 
-/* ALL MEMBERS SECTION - optional extra top padding for breathing room */
-.team-members-section {
-  margin-top: 50px;
-}
+.team-leaders-section .team-card img { height: 260px; }
 
-/* GRID layout - 3 columns with proper centering of last row */
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 280px));
-  gap: 40px;
-  justify-content: center;
-  justify-items: center;
-  align-items: start;
-}
+.team-leaders-section .team-card h3 { font-size: 16px; }
 
+.team-leaders-section .team-card p { font-size: 14px; }
+
+/* ── MEMBERS SECTION ── */
+.team-members-section { margin-top: 50px; }
+
+/* ── GRID ── */
 .team-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 40px;
+  gap: 24px;
+  align-items: stretch;
 }
 
+/* ── CARD — default (members) ── */
 .team-card {
-  flex: 0 0 280px;
+  flex: 0 0 180px;
+  max-width: 180px;
   background: #fff;
   border-radius: 12px;
-  padding: 20px;
+  padding: 14px;
   text-align: center;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
   transition: transform 0.2s, box-shadow 0.2s;
-  width: 100%;
-  max-width: 280px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-
 .team-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.12);
 }
 
-/* IMAGE styles */
+/* ── IMAGE — default (members) ── */
 .team-card img {
   width: 100%;
-  height: 260px;
+  height: 180px;
   object-fit: cover;
   object-position: top;
   border-radius: 8px;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
   filter: grayscale(100%);
   transition: filter 0.3s;
   flex-shrink: 0;
 }
 
-.team-card:hover img {
-  filter: grayscale(0%);
-}
+.team-card:hover img { filter: grayscale(0%); }
 
-/* CEO bigger image */
-.team-card.ceo img {
-  height: 300px;
-}
-
-/* TEXT styles */
+/* ── TEXT — default (members) ── */
 .team-card h3 {
-  font-size: 16px;
+  font-size: 13px;
   font-weight: 700;
-  margin-bottom: 6px;
-  height: 48px; /* fits up to 2 lines */
+  margin-bottom: 4px;
+  height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -196,16 +173,13 @@ nav {
 }
 
 .team-card p {
-  font-size: 14px;
+  font-size: 12px;
   color: #666;
   margin-top: auto;
 }
 
 /* ── FOOTER ── */
-footer {
-  background: #000;
-  padding: 32px 48px;
-}
+footer { background: #000; padding: 32px 48px; }
 
 .footer-inner {
   display: flex;
@@ -214,54 +188,33 @@ footer {
   gap: 14px;
 }
 
-.footer-social {
-  display: flex;
-  gap: 16px;
-}
+.footer-social { display: flex; gap: 16px; }
 
 .footer-social a {
-  width: 36px;
-  height: 36px;
+  width: 36px; height: 36px;
   border-radius: 50%;
-  border: 1.5px solid rgba(255, 255, 255, 0.4);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  border: 1.5px solid rgba(255,255,255,0.4);
+  display: flex; align-items: center; justify-content: center;
+  transition: border-color 0.2s, opacity 0.2s;
 }
 
-.footer-social a:hover {
-  border-color: #fff;
-  opacity: 0.75;
-}
+.footer-social a:hover { border-color: #fff; opacity: 0.75; }
 
-.footer-copy {
-  font-size: 13px;
-  color: rgba(255, 255, 255, 0.7);
-}
+.footer-copy { font-size: 13px; color: rgba(255,255,255,0.7); }
 
-/* ── RESPONSIVE ADJUSTMENTS ── */
+/* ── RESPONSIVE ── */
 @media (max-width: 1000px) {
-  .team-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 40px;
-  align-items: stretch;
-}
-  .team-inner, .nav-inner {
-    width: 90%;
-  }
+  .team-inner, .nav-inner { width: 90%; }
+  .team-grid { gap: 16px; }
+  .team-members-section .team-card { flex: 0 0 150px; max-width: 150px; }
+  .team-members-section .team-card img { height: 150px; }
 }
 
 @media (max-width: 700px) {
-  .team-grid {
-    grid-template-columns: 280px;
-  }
+  .team-members-section .team-card { flex: 0 0 140px; max-width: 140px; }
 }
 
 @media (max-width: 550px) {
-  .team-ceo .team-card {
-    max-width: 280px;
-    margin: 0 auto;
-  }
+  .team-ceo .team-card { max-width: 240px; margin: 0 auto; }
+  .team-members-section .team-card { flex: 0 0 130px; max-width: 130px; }
 }
